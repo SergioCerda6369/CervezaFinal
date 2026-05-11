@@ -1,0 +1,49 @@
+package com.cerveza.cerveza.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cerveza.cerveza.dto.FermentacionDTO;
+import com.cerveza.cerveza.model.Fermentacion;
+import com.cerveza.cerveza.service.FermentacionService;
+
+import jakarta.validation.Valid;
+
+@RestController
+@RequestMapping("/api/fermentacion")
+@CrossOrigin(origins =  "*")
+public class FermentacionController {
+
+    @Autowired
+    private FermentacionService fermentacionService;
+
+    @GetMapping
+    public ResponseEntity<List<FermentacionDTO>> listar() {
+        return new ResponseEntity<>(fermentacionService.obtenerTodos(), HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<FermentacionDTO> guardar(@Valid @RequestBody Fermentacion fermentacion) {
+        return new ResponseEntity<>(fermentacionService.guardar(fermentacion), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminar(@PathVariable Integer id) {
+        if (fermentacionService.eliminar(id)) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+}
