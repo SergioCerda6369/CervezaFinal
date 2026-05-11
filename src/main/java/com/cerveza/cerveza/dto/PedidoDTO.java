@@ -11,5 +11,6 @@ public class PedidoDTO {
     private Integer cantidadSolicitada;
     private Double totalVenta;
     private String estadoPedido;
+    private String nombreProducto;
 
 }
