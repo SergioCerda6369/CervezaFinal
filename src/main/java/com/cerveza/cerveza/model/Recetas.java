@@ -39,8 +39,4 @@ public class Recetas {
     @Min(value = 0, message = "La cantidad de tiempo de coccion debe de ser mayor a 0.")
     @Column(nullable = false)
     private Integer tiempo_coccion;
-
-
-
-
 }
