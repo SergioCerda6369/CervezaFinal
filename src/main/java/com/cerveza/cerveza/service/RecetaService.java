@@ -39,13 +39,13 @@ public class RecetaService {
 
     private RecetasDTO convertirADTO(Recetas r) {
         RecetasDTO dto = new RecetasDTO();
-        dto.setId_receta(r.getId_receta());
-        dto.setNombre_receta(r.getNombre_receta());
-        dto.setTipo_cerveza(r.getTipo_cerveza());
-        dto.setTiempo_coccion(r.getTiempo_coccion());
+        dto.setIdReceta(r.getIdReceta());
+        dto.setNombreReceta(r.getNombreReceta());
+        dto.setTipoCerveza(r.getTipoCerveza());
+        dto.setTiempoCoccion(r.getTiempoCoccion());
 
         if (r.getMaterialPrincipal() != null) {
-        dto.setNombreInsumoPrincipal(r.getMaterialPrincipal().getNombre_material());
+        dto.setNombreMaterialPrincipal(r.getMaterialPrincipal().getNombreMaterial());
         }
         return dto;
     }

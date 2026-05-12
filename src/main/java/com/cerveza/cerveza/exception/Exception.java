@@ -19,8 +19,8 @@ public class Exception {
                 .map(err -> err.getField() + ": " + err.getDefaultMessage())
                 .collect(Collectors.joining(", "));
         ErrorResponse error = new ErrorResponse();
-        error.setMensaje("Errores de validacion");
-        error.setDetalle(detalle);
+        error.setMessage("Errores de validacion");
+        error.setDetails(detalle);
         error.setStatus(HttpStatus.BAD_REQUEST.value());
         error.setTimestamp(LocalDateTime.now());
 
@@ -30,8 +30,8 @@ public class Exception {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorResponse> handleRuntime(RuntimeException ex) {
         ErrorResponse error = new ErrorResponse();
-        error.setMensaje("Error en el sistema");
-        error.setDetalle(ex.getMessage());
+        error.setMessage("Error en el sistema");
+        error.setDetails(ex.getMessage());
         error.setStatus(HttpStatus.NOT_FOUND.value());
         error.setTimestamp(LocalDateTime.now());
 

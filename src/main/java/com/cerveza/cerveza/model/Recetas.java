@@ -25,24 +25,24 @@ public class Recetas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_receta;
+    private Integer idReceta;
 
     @NotBlank
     @Size(min = 10, max = 255, message = "La receta debe de llevar nombre (En consecuencia a lo que se creara.)")
     @Column(nullable = false, length = 255)
-    private String nombre_receta;
+    private String nombreReceta;
 
     @NotBlank
     @Size(min = 10, max = 255, message = "La receta debe de llevar el tipo de cerveza que se creara (IPA, Stout, Porter, etc.)")
     @Column(nullable = false, length = 255)
-    private String tipo_cerveza;
+    private String tipoCerveza;
 
     @NotNull(message = "La cantidad de tiempo de coccion de la cerveza es obligatoria.")
     @Min(value = 0, message = "La cantidad de tiempo de coccion debe de ser mayor a 0.")
     @Column(nullable = false)
-    private Integer tiempo_coccion;
+    private Integer tiempoCoccion;
 
     @ManyToOne
     @JoinColumn(name = "id_material", nullable = false)
-    private Inventario_Materiales materialPrincipal;
+    private InventarioMateriales materialPrincipal;
 }

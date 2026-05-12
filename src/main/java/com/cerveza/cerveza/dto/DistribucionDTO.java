@@ -8,11 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DistribucionDTO {
-    private Integer id_distribucion;
-    private String patente_camion;
-    private String nombre_conductor;
-    private String estado_distribucion;
-
-    private String clientePedido;
+    private Integer idDistribucion;
+    private String patenteCamion;
+    private String nombreConductor;
+    private String estadoDistribucion;
+    private String clienteDelPedido;
 
 }

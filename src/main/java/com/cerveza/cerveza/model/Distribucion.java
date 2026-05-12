@@ -23,22 +23,22 @@ public class Distribucion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_distribucion;
+    private Integer idDistribucion;
 
     @NotBlank(message = "La patente del camión es obligatoria.")
     @Size(min = 6, max = 6, message = "La patente del camión debe de tener 6 caracteres.")
     @Column(nullable = false, length = 6)
-    private String patente_camion;
+    private String patenteCamion;
 
     @NotBlank(message = "El nombre del conductor es obligatorio.")
     @Size(min = 3, max = 255, message = "El nombre del conductor debe de tener entre 3 y 255 caracteres.")
     @Column(nullable = false, length = 255)
-    private String nombre_conductor;
+    private String nombreConductor;
 
     @NotBlank(message = "El estado de la distribución es obligatorio.")
     @Size(min = 2, max = 100, message = "El estado de la distribución debe de tener entre 2 y 100 caracteres.")
     @Column(nullable = false, length = 100)
-    private String estado_distribucion;
+    private String estadoDistribucion;
 
     @ManyToOne
     @JoinColumn(name = "id_pedido", nullable = false)

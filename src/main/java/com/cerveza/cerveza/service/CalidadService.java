@@ -43,13 +43,13 @@ public class CalidadService {
 
     private CalidadDTO convertirADTO(Calidad c) {
         CalidadDTO dto = new CalidadDTO();
-        dto.setId_calidad(c.getId_calidad());
-        dto.setCantidad_ph(c.getCantidad_ph());
-        dto.setControl_calidad(c.isControl_calidad());
+        dto.setIdCalidad(c.getIdCalidad());
+        dto.setCantidadPh(c.getCantidadPh());
+        dto.setControlCalidad(c.isControlCalidad());
 
         if (c.getLote() != null) {
-        dto.setEstadoLoteProduccion(c.getLote().getEstado_produccion());
-    }
+            dto.setIdProduccionAsociada(c.getLote().getIdProduccion());
+        }
         return dto;
     }
 

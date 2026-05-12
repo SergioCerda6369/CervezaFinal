@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cerveza.cerveza.dto.Inventario_MaterialesDTO;
-import com.cerveza.cerveza.model.Inventario_Materiales;
-import com.cerveza.cerveza.service.Inventario_MaterialesService;
+import com.cerveza.cerveza.dto.InventarioMaterialesDTO;
+import com.cerveza.cerveza.model.InventarioMateriales;
+import com.cerveza.cerveza.service.InventarioMaterialesService;
 
 import jakarta.validation.Valid;
 
@@ -24,18 +24,18 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/materiales")
 @CrossOrigin(origins = "*")
 
-public class Inventario_MaterialesController {
+public class InventarioMaterialesController {
 
     @Autowired
-    private Inventario_MaterialesService materialesService;
+    private InventarioMaterialesService materialesService;
 
     @GetMapping
-    public ResponseEntity<List<Inventario_MaterialesDTO>> listar() {
+    public ResponseEntity<List<InventarioMaterialesDTO>> listar() {
         return new ResponseEntity<>(materialesService.obtenerTodos(), HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Inventario_MaterialesDTO> guardar(@Valid @RequestBody Inventario_Materiales material) {
+    public ResponseEntity<InventarioMaterialesDTO> guardar(@Valid @RequestBody InventarioMateriales material) {
         return new ResponseEntity<>(materialesService.guardar(material), HttpStatus.CREATED);
     }
 

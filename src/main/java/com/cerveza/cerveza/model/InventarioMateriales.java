@@ -19,25 +19,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "inventario_materiales")
-public class Inventario_Materiales {
+public class InventarioMateriales {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_material;
+    private Integer idMaterial;
 
     @NotBlank(message = "El nombre del material es obligatorio.")
     @Size(min = 3, max = 255, message = "El nombre del material debe tener entre 3 y 255 caracteres.")
     @Column(nullable = false, length = 255)
-    private String nombre_material;
+    private String nombreMaterial;
 
     @NotNull(message = "La cantidad de stock del material es obligatoria.")
     @Min(value = 0, message = "La cantidad de stock debe de ser mayor a 0.")
     @Column(nullable = false)
-    private Integer cantidad_stock;
+    private Integer cantidadStock;
 
     @NotBlank(message = "El nombre del proveedor es obligatorio.")
     @Size(min = 15, max = 255, message = "El nombre del proveedor debe de tener entre 15 a 255 caracteres.")
     @Column(length = 255)
-    private String nombre_proveedor;
+    private String nombreProveedor;
 
 }

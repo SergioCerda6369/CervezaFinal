@@ -24,16 +24,16 @@ public class Fermentacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_fermentacion;
+    private Integer idFermentacion;
 
     @NotBlank(message = "Debe de estar registrado el codigo del tanque de la fermentacion.")
     @Size(min = 3, max = 10, message = "El codigo del tanque debe de tener entre 3 a 10 caracteres. (Ejemplo: A-01, B-02, etc.)")
     @Column(nullable = false, length = 10)
-    private String codigo_tanque;
+    private String codigoTanque;
 
     @NotNull (message = "La temperatura actual de la fermentacion es obligatoria. (Recomendacion que se trate en celsius)")
     @Column(nullable = false)
-    private Integer temperatura_actual;
+    private Integer temperaturaActual;
 
     @ManyToOne
     @JoinColumn(name = "id_produccion", nullable = false)

@@ -4,11 +4,9 @@ import lombok.Data;
 
 @Data
 public class CalidadDTO {
-
-    private Integer id_calidad;
-    private Integer cantidad_ph;
-    private boolean control_calidad;
-
-    private String estadoLoteProduccion;
+    private Integer idCalidad;
+    private Integer cantidadPh;
+    private boolean controlCalidad;
+    private Integer idProduccionAsociada;
 
 }

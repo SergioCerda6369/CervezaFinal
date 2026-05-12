@@ -39,12 +39,12 @@ public class ProduccionService {
 
     private ProduccionDTO convertirADTO(Produccion p) {
         ProduccionDTO dto = new ProduccionDTO();
-        dto.setId_produccion(p.getId_produccion());
-        dto.setEstado_produccion(p.getEstado_produccion());
-        dto.setResponsable_produccion(p.getResponsable_produccion());
+        dto.setIdProduccion(p.getIdProduccion());
+        dto.setEstadoProduccion(p.getEstadoProduccion());
+        dto.setResponsableProduccion(p.getResponsableProduccion());
         
         if (p.getReceta() != null) {
-        dto.setNombre_receta(p.getReceta().getNombre_receta());
+        dto.setNombreReceta(p.getReceta().getNombreReceta());
     }
         return dto;
     }

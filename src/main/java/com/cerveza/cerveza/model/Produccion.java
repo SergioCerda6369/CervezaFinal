@@ -23,17 +23,17 @@ public class Produccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_produccion;
+    private Integer idProduccion;
 
     @NotBlank(message = "La produccion debe de tener un estado visible.")
     @Size(min = 3, max = 255, message = "El estado de la produccion debe de tener entre 3 y 255 caracteres.")
     @Column(nullable = false, length = 255)
-    private String estado_produccion;
+    private String estadoProduccion;
 
     @NotBlank(message = "Debe de haber un responsable de supervisar la produccion.")
     @Size(min = 3, max = 50, message = "El nombre del responsable debe de tener entre 3 y 50 caracteres.")
     @Column(nullable = false, length = 50)
-    private String responsable_produccion;
+    private String responsableProduccion;
 
     @ManyToOne
     @JoinColumn(name = "id_receta", nullable = false)

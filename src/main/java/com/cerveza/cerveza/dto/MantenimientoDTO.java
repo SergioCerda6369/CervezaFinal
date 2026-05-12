@@ -8,12 +8,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MantenimientoDTO {
-    private Integer id_mantenimiento;
-    private String tipo_equipo;
-    private String codigo_equipo;
-    private String estado_equipo;
-    private String estado_mantenimiento;
-
+    private Integer idMantenimiento;
+    private String tipoEquipo;
+    private String codigoEquipo;
+    private String estadoEquipo;
+    private String estadoMantenimiento;
     private String codigoTanqueMantenimiento;
 
 }

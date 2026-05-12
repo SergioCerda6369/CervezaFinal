@@ -23,17 +23,17 @@ import lombok.NoArgsConstructor;
 public class Calidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_calidad;
+    private Integer idCalidad;
 
     @NotNull(message = "La cantidad de ph que tiene la cerveza es obligatoria.")
     @Min(value = 3, message = "La cantidad minima de ph que debe de tener la cerveza es 3.0.")
     @Max(value = 5, message = "La cantidad maxima de ph que debe de tener la cerveza es 5.0.")
     @Column(nullable = false)
-    private Integer cantidad_ph;
+    private Integer cantidadPh;
 
     @NotNull(message = "Se debe de saber si la cerveza paso o no el control de calidad.")
     @Column(nullable = false)
-    private boolean control_calidad;
+    private boolean controlCalidad;
 
     @ManyToOne
     @JoinColumn(name = "id_produccion", nullable = false)

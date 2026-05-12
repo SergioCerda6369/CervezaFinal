@@ -39,14 +39,11 @@ public class DistribucionService {
 
     private DistribucionDTO convertirADTO(Distribucion d) {
         DistribucionDTO dto = new DistribucionDTO();
-        dto.setId_distribucion(d.getId_distribucion());
-        dto.setPatente_camion(d.getPatente_camion());
-        dto.setNombre_conductor(d.getNombre_conductor());
-        dto.setEstado_distribucion(d.getEstado_distribucion());
-
-        if (d.getPedido() != null) {
-        dto.setClientePedido(d.getPedido().getCliente());
-        }
+        dto.setIdDistribucion(d.getIdDistribucion());
+        dto.setPatenteCamion(d.getPatenteCamion());
+        dto.setNombreConductor(d.getNombreConductor());
+        dto.setEstadoDistribucion(d.getEstadoDistribucion());
+        if(d.getPedido() != null) dto.setClienteDelPedido(d.getPedido().getCliente());
         return dto;
     }
 

@@ -39,14 +39,9 @@ public class FermentacionService {
 
     private FermentacionDTO convertirADTO(Fermentacion f) {
         FermentacionDTO dto = new FermentacionDTO();
-        dto.setId_fermentacion(f.getId_fermentacion());
-        dto.setCodigo_tanque(f.getCodigo_tanque());
-        dto.setTemperatura_actual(f.getTemperatura_actual());
-
-        if (f.getProduccion() != null) {
-        dto.setEstadoLoteProduccion(f.getProduccion().getEstado_produccion());
-        }
-
+        dto.setIdFermentacion(f.getIdFermentacion());
+        dto.setCodigoTanque(f.getCodigoTanque());
+        dto.setTemperaturaActual(f.getTemperaturaActual());
         return dto;
     }
 

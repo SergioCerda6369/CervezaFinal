@@ -39,14 +39,10 @@ public class EnvasadoService {
 
     private EnvasadoDTO convertirADTO(Envasado e) {
         EnvasadoDTO dto = new EnvasadoDTO();
-        dto.setId_envasado(e.getId_envasado());
-        dto.setTipo_envase(e.getTipo_envase());
-        dto.setCantidad_envases(e.getCantidad_envases());
-
-        if (e.getProducto() != null) {
-        dto.setNombreProducto(e.getProducto().getNombreCerveza());
-    }
-
+        dto.setIdEnvasado(e.getIdEnvasado());
+        dto.setTipoEnvase(e.getTipoEnvase());
+        dto.setCantidadEnvases(e.getCantidadEnvases());
+        if(e.getProducto() != null) dto.setNombreProductoFinal(e.getProducto().getNombreCerveza());
         return dto;
     }
 

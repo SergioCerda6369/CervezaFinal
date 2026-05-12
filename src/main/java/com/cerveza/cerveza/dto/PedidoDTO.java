@@ -12,7 +12,6 @@ public class PedidoDTO {
     private Double totalVenta;
     private String estadoPedido;
     private String nombreProducto;
-
     private String clientePedido;
 
 }

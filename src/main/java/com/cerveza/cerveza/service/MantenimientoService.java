@@ -39,14 +39,14 @@ public class MantenimientoService {
 
     private MantenimientoDTO convertirADTO(Mantenimiento m) {
         MantenimientoDTO dto = new MantenimientoDTO();
-        dto.setId_mantenimiento(m.getId_mantenimiento());
-        dto.setTipo_equipo(m.getTipo_equipo());
-        dto.setCodigo_equipo(m.getCodigo_equipo());
-        dto.setEstado_equipo(m.getEstado_equipo());
-        dto.setEstado_mantenimiento(m.getEstado_mantenimiento());
+        dto.setIdMantenimiento(m.getIdMantenimiento());
+        dto.setTipoEquipo(m.getTipoEquipo());
+        dto.setCodigoEquipo(m.getCodigoEquipo());
+        dto.setEstadoEquipo(m.getEstadoEquipo());
+        dto.setEstadoMantenimiento(m.getEstadoMantenimiento());
 
         if (m.getTanque() != null) {
-        dto.setCodigoTanqueMantenimiento(m.getTanque().getCodigo_tanque());
+        dto.setCodigoTanqueMantenimiento(m.getTanque().getCodigoTanque());
         }
         return dto;
     }
