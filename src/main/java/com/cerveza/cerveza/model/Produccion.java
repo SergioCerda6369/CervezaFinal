@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -32,6 +34,10 @@ public class Produccion {
     @Size(min = 3, max = 50, message = "El nombre del responsable debe de tener entre 3 y 50 caracteres.")
     @Column(nullable = false, length = 50)
     private String responsable_produccion;
+
+    @ManyToOne
+    @JoinColumn(name = "id_receta", nullable = false)
+    private Recetas receta;
 
     
 }

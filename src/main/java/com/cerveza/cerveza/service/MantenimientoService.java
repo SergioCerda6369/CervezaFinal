@@ -44,6 +44,10 @@ public class MantenimientoService {
         dto.setCodigo_equipo(m.getCodigo_equipo());
         dto.setEstado_equipo(m.getEstado_equipo());
         dto.setEstado_mantenimiento(m.getEstado_mantenimiento());
+
+        if (m.getTanque() != null) {
+        dto.setCodigoTanqueMantenimiento(m.getTanque().getCodigo_tanque());
+        }
         return dto;
     }
 

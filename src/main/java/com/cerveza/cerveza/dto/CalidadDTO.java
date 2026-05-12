@@ -9,4 +9,6 @@ public class CalidadDTO {
     private Integer cantidad_ph;
     private boolean control_calidad;
 
+    private String estadoLoteProduccion;
+
 }

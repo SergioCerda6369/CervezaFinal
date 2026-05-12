@@ -52,6 +52,10 @@ public class Pedido {
     @Column(nullable = false, length = 50)
     private String estadoPedido;
 
+    @ManyToOne
+    @JoinColumn(name = "id_pedido", nullable = false)
+    private Pedido pedido;
+
 }
 
 

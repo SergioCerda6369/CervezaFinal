@@ -23,6 +23,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/envasado")
 @CrossOrigin(origins = "*")
+
 public class EnvasadoController {
 
     @Autowired

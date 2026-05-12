@@ -43,6 +43,10 @@ public class DistribucionService {
         dto.setPatente_camion(d.getPatente_camion());
         dto.setNombre_conductor(d.getNombre_conductor());
         dto.setEstado_distribucion(d.getEstado_distribucion());
+
+        if (d.getPedido() != null) {
+        dto.setClientePedido(d.getPedido().getCliente());
+        }
         return dto;
     }
 

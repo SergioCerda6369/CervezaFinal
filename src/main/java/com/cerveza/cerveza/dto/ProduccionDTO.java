@@ -8,5 +8,7 @@ public class ProduccionDTO {
     private Integer id_produccion;
     private String estado_produccion;
     private String responsable_produccion;
+    
+    private String nombre_receta;
 
 }

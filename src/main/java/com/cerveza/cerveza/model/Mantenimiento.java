@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -41,6 +43,10 @@ public class Mantenimiento {
     @Size(min = 3, max = 255, message = "El estado del mantenimiento debe de tener entre 3 y 255 caracteres.")
     @Column(nullable = false, length = 255)
     private String estado_mantenimiento;
+
+    @ManyToOne
+    @JoinColumn(name = "id_fermentacion", nullable = false)
+    private Fermentacion tanque;
 
 }
 

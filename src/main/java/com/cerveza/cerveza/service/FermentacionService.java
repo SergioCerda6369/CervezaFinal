@@ -42,6 +42,11 @@ public class FermentacionService {
         dto.setId_fermentacion(f.getId_fermentacion());
         dto.setCodigo_tanque(f.getCodigo_tanque());
         dto.setTemperatura_actual(f.getTemperatura_actual());
+
+        if (f.getProduccion() != null) {
+        dto.setEstadoLoteProduccion(f.getProduccion().getEstado_produccion());
+        }
+
         return dto;
     }
 

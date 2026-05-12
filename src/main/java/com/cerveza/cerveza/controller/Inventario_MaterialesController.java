@@ -23,6 +23,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/materiales")
 @CrossOrigin(origins = "*")
+
 public class Inventario_MaterialesController {
 
     @Autowired

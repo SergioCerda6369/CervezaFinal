@@ -13,4 +13,6 @@ public class DistribucionDTO {
     private String nombre_conductor;
     private String estado_distribucion;
 
+    private String clientePedido;
+
 }

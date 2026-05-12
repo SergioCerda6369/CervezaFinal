@@ -42,6 +42,10 @@ public class ProduccionService {
         dto.setId_produccion(p.getId_produccion());
         dto.setEstado_produccion(p.getEstado_produccion());
         dto.setResponsable_produccion(p.getResponsable_produccion());
+        
+        if (p.getReceta() != null) {
+        dto.setNombre_receta(p.getReceta().getNombre_receta());
+    }
         return dto;
     }
 

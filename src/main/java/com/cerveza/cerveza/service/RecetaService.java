@@ -43,6 +43,10 @@ public class RecetaService {
         dto.setNombre_receta(r.getNombre_receta());
         dto.setTipo_cerveza(r.getTipo_cerveza());
         dto.setTiempo_coccion(r.getTiempo_coccion());
+
+        if (r.getMaterialPrincipal() != null) {
+        dto.setNombreInsumoPrincipal(r.getMaterialPrincipal().getNombre_material());
+        }
         return dto;
     }
 

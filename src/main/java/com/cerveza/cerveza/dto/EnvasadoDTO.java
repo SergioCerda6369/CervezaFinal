@@ -11,6 +11,8 @@ public class EnvasadoDTO {
     private Integer id_envasado;
     private String tipo_envase;
     private Integer cantidad_envases;
+    
+    private String nombreProducto;
 
 }
 

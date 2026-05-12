@@ -14,4 +14,6 @@ public class MantenimientoDTO {
     private String estado_equipo;
     private String estado_mantenimiento;
 
+    private String codigoTanqueMantenimiento;
+
 }

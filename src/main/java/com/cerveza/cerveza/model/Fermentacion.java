@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -32,6 +34,10 @@ public class Fermentacion {
     @NotNull (message = "La temperatura actual de la fermentacion es obligatoria. (Recomendacion que se trate en celsius)")
     @Column(nullable = false)
     private Integer temperatura_actual;
+
+    @ManyToOne
+    @JoinColumn(name = "id_produccion", nullable = false)
+    private Produccion produccion;
 
 
 }

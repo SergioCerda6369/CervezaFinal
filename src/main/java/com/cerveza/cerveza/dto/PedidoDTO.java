@@ -13,4 +13,6 @@ public class PedidoDTO {
     private String estadoPedido;
     private String nombreProducto;
 
+    private String clientePedido;
+
 }

@@ -42,6 +42,11 @@ public class EnvasadoService {
         dto.setId_envasado(e.getId_envasado());
         dto.setTipo_envase(e.getTipo_envase());
         dto.setCantidad_envases(e.getCantidad_envases());
+
+        if (e.getProducto() != null) {
+        dto.setNombreProducto(e.getProducto().getNombreCerveza());
+    }
+
         return dto;
     }
 

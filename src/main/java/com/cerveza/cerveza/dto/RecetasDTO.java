@@ -10,4 +10,6 @@ public class RecetasDTO {
     private String tipo_cerveza;
     private Integer tiempo_coccion;
 
+    private String nombreInsumoPrincipal;
+
 }
